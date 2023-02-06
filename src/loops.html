@@ -7,10 +7,15 @@
     <title>Loops</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-200 text-gray-700">
+<body class="bg-gray-200 text-gray-800 container mx-auto">
     <h1 class="text-3xl font-bold mx-auto text-center mt-8 ">
         Loops
     </h1>
+    
+    <div class="text-center">
+        <h7 ><span class="text-red-500">by Anthony Stenson </span></h7>
+    </div>
+
     <div class="ml-3.5 mt-10 p-4 ">
             <h3 class="font-bold ">What is a loop in JavaScript and why is it useful?</h3>
                 <h4 class=" mt-4 ">
@@ -175,6 +180,30 @@ d
 The <span class="font-bold">"for...of"</span> loop is used to loop through the 'str' variable, which is a string. The loop variable 'char' takes on each character in the string 
 one at a time, and the code inside the loop is executed for each character.
         </h4>
+        <br>
+        <br>
+        Iterating over a <span class="font-bold">map:</span>
+        <pre>
+            <code>
+let myMap = new Map();
+myMap.set("key1", "value1");
+myMap.set("key2", "value2");
+myMap.set("key3", "value3");
+
+for (let [key, value] of myMap) {
+    console.log(`${key}: ${value}`);
+}
+
+/*
+Output:
+key1: value1
+key2: value2
+key3: value3
+*/
+            </code>
+        </pre>
+The <span class="font-bold">"for...of"</span> loop iterates over each key-value pair in the <span class="font-bold">"myMap"</span> object, and the <span class="font-bold">[key, value]</span> destructuring syntax is used to access both the key and the value in each iteration.
+
     </div>
 
 
