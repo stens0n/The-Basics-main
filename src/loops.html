@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 text-gray-700">
+    <h1 class="text-3xl font-bold mx-auto text-center mt-8 ">
+        Loops
+    </h1>
+    <div class="ml-3.5 mt-10 p-4 ">
+            <h3 class="font-bold ">What is a loop in JavaScript and why is it useful?</h3>
+                <h4 class=" mt-4 ">
+                    A loop in JS is a control structure that allows you to repeatedly execute a block of code until a certain condition is met. Loops are
+                    useful for performing repetitive tasks, such a processing arrays, generating sequences of numbers, or performing some action a specified 
+                    number of times. By using Loops, you can automate the process of repeating a task, avoiding the need to write the same code multiple times. 
+                    This makes your code more efficient, readable, and maintainable.
+                </h4> 
+    </div>
+    
+    <div class="ml-3.5 mt-6 p-4 ">
+        <h3 class="font-bold">What are the different components of a for loop?</h3>
+            <h4 class="fixed mt-4">
+                <p>
+                    <h4>There are three components of a for loop: </h4>
+                        <br>
+                        <h3 class="">Initialization, Condition, and Increment</h3>
+                        <br>
+                        <h4><h4 class="font-bold">Initialization:</h4>
+
+                            The initialization component is executed only once, at the beginning of the loop. It is used to
+                            set up the initial value of a counter variable that will be used to control the loop.
+                        </h4>
+                        <h4><h4 class="font-bold">Condition:</h4>
+
+                        The condition component is evaluated before each iteration of the loop. If the condition is true, the
+                        code withing the loop will be executed. If the condition is false, the loop will terminate.
+                        </h4>
+                        <h4><h4 class="font-bold">Increment:</h4>
+
+                         The increment component is executed afeter each iteration of the loop. It is used to increment the value of the counter
+                         variable, which is then tested against the condition in the next iteration.
+
+                         
+                            <pre>
+                                <code >
+ for (initialization; condition; increment) {
+    //code to be executed
+ }
+                                </code>
+                            </pre>
+                                
+                            
+                        
+                    </h4>
+                    <h4>Here is an example of a for loop that iterates over an array and prints each element:</h4>
+                        <div class="text-left ">
+                            <pre>
+                                <code >
+  <span class="text-red-600">const</span> array = [<span class="text-green-600">1</span>, <span class="text-green-600">2</span>, <span class="text-green-600">3</span>, <span class="text-green-600">4</span>, <span class="text-green-600">5</span>]
+        
+  <span class="text-red-600">for</span> (<span class="text-violet-600">let</span> i=0; i < array.length; i++) {
+    console.log(array[i])
+  }
+                                </code>
+                            </pre>
+                        </div>
+                        
+                    <h4>This Loop iterates over the array and prints each element using the "console.log()" function. The loop starts with
+                        and index of "0" and continues until the index is no longer less than the length of the array.
+                        
+                        
+                        The "let" keyword allows you to declare a block-scoped variable, which is a good practice for avoiding variable shadowing 
+                        and other unexpected behavior. In this case, the variable 'i' is only accessible withing the loop block. 
+                    </h4>
+                </p>
+            </h4> 
+    </div>
+
+    <div class="ml-3.5 mt-16 p-6">
+        <h3 class="font-bold">What is the difference between "for" and "forEach" loop in JavaScript?</h3>
+        <h4 class="mt-4">
+            <p><span class="font-bold">"for" and "forEach"</span> loops are two different ways to iterate over arrays in JS. </p>
+            <br>
+            <span class="font-bold">"for"</span> loop allows you to iterate over an array by incrementing an index value and accessing the 
+            elements of the array using that index. It provides more control over the iteration process, as it allows you
+            to specifiy a start and end value for the index, as well as to change the index value in the body of the loop.
+            <br>
+            <br>
+            <span class="font-bold">"forEach"</span> loop is a higher-order function that takes a callack function as an argument and calls it once for each element
+            in the array. It provides a more concise and functional way to iterate over an array and it does not allow you to specify a 
+            start and end value for the index, nor does it allow you to change the index value in the body of the loop.
+            <br>
+            <br>
+            Here's and example of using a <span class="font-bold">"forEach"</span> loop:
+
+            <div class="text-left ">
+                <pre>
+                    <code >
+ const numbers = [1, 2, 3, 4, 5];
+
+ numbers.forEach(function(number) {
+    console.log(number);
+ });
+
+/*
+Output:
+1
+2
+3
+4
+5
+*/
+                    </code>
+                </pre>
+            </div>
+        </h4>
+    </div>
+
+
+    <div class="ml-3.5 mt-6 p-4">
+        <h3 class="font-bold">What is a "for...of" loop in JavaScript?</h3>
+        <h4 class="mt-4">
+            <span class="font-bold">"for...of"</span> is a looping construct in JavaScript that allows you to iterate over the 
+            values of an iterable object, such as an array, a string, a Map, a Set, or an Array-like object.
+            <br>
+            <br>
+        Iterating over an <span class="font-bold">array:</span>
+        <pre>
+            <code>
+<span class="text-red-600">const</span> colors = [<span class="text-green-600">'red'</span>, <span class="text-green-600">'green'</span>, <span class="text-green-600">'blue'</span>];
+
+<span class="text-red-600">for</span> (<span class="text-red-600">const</span> color <span class="text-red-600">of</span> colors) {
+    <span class="text-blue-800">console</span>.<span class="text-yellow-800">log</span>(color);
+}
+
+/*
+Output:
+red
+green
+blue
+*/
+            </code>
+        </pre>
+        Iterating over a <span class="font-bold">string:</span>
+<pre>
+    <code>
+let str = "Hello, World!";
+
+for (let char of str) {
+    console.log(char)
+}
+
+/*
+Output:
+H
+e
+l
+l
+o
+,
+
+W
+o
+r
+l
+d
+!
+*/
+    </code>
+</pre>
+The <span class="font-bold">"for...of"</span> loop is used to loop through the 'str' variable, which is a string. The loop variable 'char' takes on each character in the string 
+one at a time, and the code inside the loop is executed for each character.
+        </h4>
+    </div>
+
+
+</body>
+</html>
